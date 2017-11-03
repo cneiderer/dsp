@@ -19,7 +19,17 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 1) 'pwd' = show current working directory
+2) 'mkdir' = create an empty directory
+3) 'rm -r' = delete a directory and all of its children
+4) 'touch' = create an empty file
+5) 'rm' = delete a file
+6) 'mv' = rename a file
+7) 'ls -a' = list all contents in directory, including hidden files
+8) 'cp' = copie a file or directory from one directory to another
+9) 'cd' = change directory
+10) 'alias' = create a command shortcut 
+11) 'grep' = find all files that contain specified pattern or expression
 
 ---
 
@@ -34,7 +44,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 'ls' = list all contents, not including hidden items
+'ls -a' = list all contents, including hidden files and directories
+'ls -l' = list all contents in a directory in long format
+'ls -lh' = list all contents in directory in long format with readable file size
+'ls -lah' = list all contents in directory, including hidden files and directories, in long format with readable file size
+'ls -t' = order files and directories by the time they were last modified
+'ls -Glp' = list all contents in directory in long format, excluding display group and directories with a slash
 
 ---
 
@@ -42,7 +58,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 1) 'ls -r' = list contents in reverse order
+2) 'ls -R' = list contents as recursive directory tree
+3) 'ls -s' = list contents with file size
+4) 'ls -S' = list contents sorted by file size
+5) 'ls -X' = list contents sorted by extension name
 
 ---
 
@@ -50,7 +70,6 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 'xargs' reads data from standard input (stdin) and executes the command (supplied to it as an argument) one or times based on the input read.  Any blanks and spaces in input are treated as delimiters, while blank lines are ignored.
 
- 
 
