@@ -48,13 +48,9 @@ What do the following commands do:
 'ls -a' = list all contents, including hidden files and directories <br>
 'ls -l' = list all contents in a directory in long format <br>
 'ls -lh' = list all contents in directory in long format with readable file size <br>
-
 'ls -lah' = list all contents in directory, including hidden files and directories, in long format with readable file size <br>
-
 'ls -t' = order files and directories by the time they were last modified <br>
-
 'ls -Glp' = list all contents in directory in long format, excluding display group and directories with a slash <br>
-
 
 ---
 
