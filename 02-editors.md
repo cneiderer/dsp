@@ -81,7 +81,7 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Vim, because it provides additional functionality beyond nano (i.e., syntax highlighting, tab expansion, etc.), but is easier to use than emacs.
 
 --
 
@@ -89,6 +89,6 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I'm currently undecided.  Pycharm is a very nice IDE; however, the Spyder basically mimics the MATLAB IDE I'm most familiar with.  I also appreciate the more lightweight Sublime and Atom editors.
 
  
