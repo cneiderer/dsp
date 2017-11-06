@@ -1,6 +1,26 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 
+def main():
+    print("\nTesting match_ends():")
+    print("=====================")
+    test_match_ends()
+
+    print("\nTesting front_x():")
+    print("==================")
+    test_front_x()
+
+    print("\nTesting sort_last():")
+    print("====================")
+    test_sort_last()
+
+    print("\nTesting remove_adjacent():")
+    print("==========================")
+    test_remove_adjacent()
+
+    print("\nTesting linear_merge():")
+    print("=======================")
+    test_linear_merge()
 
 def match_ends(words):
     """
@@ -15,8 +35,22 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    
+    cnt = 0
+    for w in words:
+        if len(w) > 1:
+            if w[0] == w[-1]:
+                cnt += 1
 
+    return cnt
+
+
+def test_match_ends():
+    inputs = [['aba', 'xyz', 'aa', 'x', 'bbb'], 
+              ['', 'x', 'xy', 'xyx', 'xx'],
+              ['aaa', 'be', 'abc', 'hello']]
+    for l in inputs:
+        print("match_ends({0}) => {1}".format(str(l), match_ends(l)))
 
 def front_x(words):
     """
@@ -32,7 +66,24 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+
+    x_list = []
+    gen_list = []
+    for w in words:
+        if w[0] is 'x':
+            x_list.append(w)
+        else:
+            gen_list.append(w)
+
+    return sorted(x_list) + sorted(gen_list)
+    
+
+def test_front_x():
+    inputs = [['bbb', 'ccc', 'axx', 'xzz', 'xaa'],
+              ['ccc', 'bbb', 'aaa', 'xcc', 'xaa'],
+              ['mix', 'xyz', 'apple', 'xanadu', 'aardvark']]
+    for l in inputs:
+        print("front_x({0}) => {1}".format(str(l), front_x(l)))
 
 
 def sort_last(tuples):
@@ -49,7 +100,18 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    
+    from operator import itemgetter
+    
+    return sorted(tuples, key=itemgetter(-1))
+                
+
+def test_sort_last():
+    inputs = [[(1, 3), (3, 2), (2, 1)],
+              [(2, 3), (1, 2), (3, 1)], 
+              [(1, 7), (1, 3), (3, 4, 5), (2, 2)]]
+    for l in inputs:
+        print("sort_last({0}) => {1}".format(str(l), sort_last(l)))
 
 
 def remove_adjacent(nums):
@@ -68,13 +130,31 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    
+    idx = 1
+    n = len(nums)
+    while idx < n:
+        if nums[idx] == nums[idx-1]:
+            del nums[idx]
+            n -= 1
+        else:
+            idx += 1
+
+    return nums
+
+
+def test_remove_adjacent():
+    inputs = [[1, 2, 2, 3], 
+              [2, 2, 3, 3, 3], 
+              [3, 2, 3, 3, 3]]
+    for l in inputs:
+        print("remove_adjacent({0}) => {1}".format(str(l), remove_adjacent(l)))
 
 
 def linear_merge(list1, list2):
     """
     Given two lists sorted in increasing order, create and return a
-    merged list of all the elements in sorted order. You may modify
+    merged list of all the elements inl sorted order. You may modify
     the passed in lists. Ideally, the solution should work in "linear"
     time, making a single pass of both lists.
 
@@ -84,5 +164,18 @@ def linear_merge(list1, list2):
     ['aa', 'bb', 'cc', 'xx', 'zz']
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
-    """
-    raise NotImplementedError
+    """    
+ 
+    return sorted(list1 + list2)
+
+
+def test_linear_merge():
+    inputs = [(['aa', 'xx', 'zz'], ['bb', 'cc']),
+              (['aa', 'xx'], ['bb', 'cc', 'zz']),
+              (['aa', 'aa'], ['aa', 'bb', 'bb'])]
+    for l in inputs:
+        print("linear_merge({0}, {1}) => {2}".format(str(l[0]), str(l[1]), linear_merge(l[0], l[1])))
+
+
+if __name__ == "__main__":
+    main()
