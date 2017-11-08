@@ -30,6 +30,7 @@ Plot the actual and biased distributions, and compute their means. (As a startin
 >> thinkplot.Pmf(pmf)
 >> thinkplot.Config(xlabel='Number of Children < 18', ylabel='PMF')
 >> ```
+>> ![PMF Distribution](3-1-distribution_subplots.png)
 >>
 >> Compute biased distribution  
 >> ```python
@@ -38,12 +39,13 @@ Plot the actual and biased distributions, and compute their means. (As a startin
 >> 
 >> Plot actual and biased distributions  
 >> ```python
->> pmf.label = 'actual
+>> pmf.label = 'actual'
 >> thinkplot.PrePlot(2)
 >> thinkplot.Pmfs([pmf, biased_pmf])
 >> thinkplot.Config(xlabel='Num Kid < 18', ylabel='PMF')
 >> ```
->> 
+>> ![Actual vs. Biased Distributions](3-1-actual_vs_biased_distributions.png) 
+>>
 >> Compute actual and biased means  
 >> ```python
 >> print('Actual mean:', pmf.Mean())
