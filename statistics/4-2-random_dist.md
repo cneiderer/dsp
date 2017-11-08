@@ -27,3 +27,4 @@ Is the distribution uniform?
 >> ```
 >> ![cdf.png](4-2-random_cdf.png)
 >>
+>> The distribution is uniform.
