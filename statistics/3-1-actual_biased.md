@@ -9,35 +9,46 @@ Now compute the biased distribution we would see if we surveyed the children and
 Plot the actual and biased distributions, and compute their means. (As a starting place, you can use chap03ex.ipynb)
   
 >> Load data  
->> `resp = nsfg.ReadFemResp()`
+>> ```python
+>> resp = nsfg.ReadFemResp()
+>> ```
 >>
 >> Construct distribution  
->> `pmf = thinkstats2.Pmf(resp.numkdhh, label='numkdhh')`
+>> ```python
+>> pmf = thinkstats2.Pmf(resp.numkdhh, label='numkdhh')
+>> ```
 >>
 >> Plot pmf as bars and steps  
->> `# Bar Chart`  
->> `thinkplot.PrePlot(2, cols=2)`  
->> `thinkplot.Hist(pmf)`  
->> `thinkplot.Config(xlabel='Number of Children < 18', ylabel='PMF')`  
->>
->> `# Step Function`  
->> `thinkplot.PrePlot(2)`  
->> `thinkplot.SubPlot(2)`  
->> `thinkplot.Pmf(pmf)`  
->> `thinkplot.Config(xlabel='Number of Children < 18', ylabel='PMF')`  
+>> ```python 
+>> # Bar Chart
+>> thinkplot.PrePlot(2, cols=2)
+>> thinkplot.Hist(pmf)
+>> thinkplot.Config(xlabel='Number of Children < 18', ylabel='PMF')
+>> # Step Function
+>> thinkplot.PrePlot(2)
+>> thinkplot.SubPlot(2)
+>> thinkplot.Pmf(pmf)
+>> thinkplot.Config(xlabel='Number of Children < 18', ylabel='PMF')
+>> ```
 >>
 >> Compute biased distribution  
->> `biased_pmf = BiasPmf(pmf, label='biased')`  
+>> ```python
+>>  biased_pmf = BiasPmf(pmf, label='biased')
+>> ```
 >> 
 >> Plot actual and biased distributions  
->> `pmf.label = 'actual`  
->> `thinkplot.PrePlot(2)`  
->> `thinkplot.Pmfs([pmf, biased_pmf])`  
->> `thinkplot.Config(xlabel='Num Kid < 18', ylabel='PMF')`  
+>> ```python
+>> pmf.label = 'actual
+>> thinkplot.PrePlot(2)
+>> thinkplot.Pmfs([pmf, biased_pmf])
+>> thinkplot.Config(xlabel='Num Kid < 18', ylabel='PMF')
+>> ```
 >> 
 >> Compute actual and biased means  
->> `print('Actual mean:', pmf.Mean())`  
->> `print('Biased mean:', biased_pmf.Mean())`  
+>> ```python
+>> print('Actual mean:', pmf.Mean())
+>> print('Biased mean:', biased_pmf.Mean())
+>> ```
 >> Actual mean: 1.02420515504  
 >> Observed mean: 2.40367910066  
 
