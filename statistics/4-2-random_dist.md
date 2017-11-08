@@ -6,6 +6,24 @@ Generate 1000 numbers from random.random and plot their PMF and CDF.
 
 Is the distribution uniform?
 
+>> Generation array of random numbers
+>> ```python
+>> nums = np.random.random(1000)
+>> ```
 >>
+>> Plot PMF
+>> ```python
+>> pmf = thinkstats2.Pmf(nums)
+>> thinkplot.Pmf(pmf, linewidth=0.1)
+>> thinkplot.Config(xlabel='Random Number', ylabel='PMF')
+>> ```
+>> ![pmf.png](4-2-pmf.png)
 >>
+>> Plot CDF
+>> ```python
+>> cdf = thinkstats2.Cdf(nums)
+>> thinkplot.Cdf(cdf)
+>> thinkplot.Config(xlabel='Random Number', ylabel='CDF')
+>> ```
+>> ![cdf.png](4-2-cdf.png)
 >>
