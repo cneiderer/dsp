@@ -17,7 +17,7 @@ Is the distribution uniform?
 >> thinkplot.Pmf(pmf, linewidth=0.1)
 >> thinkplot.Config(xlabel='Random Number', ylabel='PMF')
 >> ```
->> ![pmf.png](4-2-pmf.png)
+>> ![pmf.png](4-2-random_pmf.png)
 >>
 >> Plot CDF
 >> ```python
@@ -25,5 +25,5 @@ Is the distribution uniform?
 >> thinkplot.Cdf(cdf)
 >> thinkplot.Config(xlabel='Random Number', ylabel='CDF')
 >> ```
->> ![cdf.png](4-2-cdf.png)
+>> ![cdf.png](4-2-random_cdf.png)
 >>
