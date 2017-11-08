@@ -13,8 +13,8 @@ Using the variable totalwgt_lb, investigate whether first babies are lighter or 
 >> ```python
 >> wgtEffect = CohenEffectSize(firsts.totalwgt_lb, others.totalwgt_lb)
 >> print('{:.10f}'.format(wgtEffect))
->> -0.0886729271
 >> ```
+>> -0.0886729271
 >>
 >> Compare the effect sizes.  
 >> ```python
