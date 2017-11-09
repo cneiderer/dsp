@@ -48,7 +48,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >> 2
 >> ```
 >>
->> Map Example:  
+>> Mapping Example:  
 >> `map(func, seq)` applies the function `func` to all the elements of the sequence `seq`. It returns a new list with the elements changed by `func`.  
 >> ```python
 >> a = [1, 2, 3, 4]
@@ -57,12 +57,14 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >> [18, 14, 14, 14]
 >> ```
 >>
->> Sort Example:
+>> Sorting Example:
+>> `sorted(seq, key=func)` returns a new list with the elements of the sequence `seq` sorted according to function `func`.  
 >> ```python
 >> mylist = [(3, 5, 8), (6, 2, 8), ( 2, 9, 4), (6, 8, 5)]
 >> sorted(mylist, key=lambda x: x[1])
 >> [(6, 2, 8), (3, 5, 8), (6, 8, 5), (2, 9, 4)]
 >> ```
+>> In this example, for each element `x` in `mylist` the lambda returns index 1 of that element, then sort all the elements of the original list `mylist` by the sorted order of the list returned by the lambda function.
 
 ---
 
