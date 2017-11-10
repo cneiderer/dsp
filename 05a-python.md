@@ -32,7 +32,7 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> The lambda operator or lambda function is a way to create small anonymous functions, i.e. functions without a name. These functions are often throw-away functions (i.e. they are just needed where they have been created.) Lambda functions are often used as the function argument in the `map()`, `filter()`, and `reduce()` functions which apply a function to all the elements of a sequence.  Lambda functions are also frequently used as the key argument to the `sorted' function and `sort` method.
+>> The lambda operator or lambda function is a way to create small anonymous functions, i.e. functions without a name. These functions are often throw-away functions (i.e. they are just needed where they have been created.) Lambda functions are often used as the function argument in the `map()`, `filter()`, and `reduce()` functions which apply a function to all the elements of a sequence.  Lambda functions are also frequently used as the key argument to the `sorted()` function and `sort` method.
 >>
 >> The general syntax of a lambda function is quite simple:  
 >> ```python
