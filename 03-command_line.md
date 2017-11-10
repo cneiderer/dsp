@@ -19,17 +19,17 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
->> (1) `pwd`&emsp;show current working directory
->> (2) `mkdir`&emsp;create an empty directory
->> (3) `rm -r`&emsp;delete a directory and all of its children
->> (4) `touch`&emsp;create an empty file
->> (5) `rm`&emsp;delete a file
->> (6) `mv`&emsp;rename a file
->> (7) `ls -a`&emsp;clist all contents in directory, including hidden files
->> (8) `cp`&emsp;copie a file or directory from one directory to another
->> (9) `cd`&emsp;change directory
->> (10) `alias`&emsp;create a command shortcut
->> (11) `grep`&emsp;find all files that contain specified pattern or expression
+>> 1. `pwd`&emsp;show current working directory
+>> 2. `mkdir`&emsp;create an empty directory
+>> 3. `rm -r`&emsp;delete a directory and all of its children
+>> 4. `touch`&emsp;create an empty file
+>> 5. `rm`&emsp;delete a file
+>> 6. `mv`&emsp;rename a file
+>> 7. `ls -a`&emsp;clist all contents in directory, including hidden files
+>> 8. `cp`&emsp;copy a file or directory from one directory to another
+>> 9. `cd`&emsp;change directory
+>> 10. `alias`&emsp;create a command shortcut
+>> 11. `grep`&emsp;find all files that contain specified pattern or expression
 
 ---
 
@@ -58,11 +58,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
->> (1) `ls -r`&emsp;list contents in reverse order
->> (2) `ls -R`&emsp;list contents as recursive directory tree
->> (3) `ls -s`&emsp;list contents with file size
->> (4) `ls -S`&emsp;list contents sorted by file size
->> (5) `ls -X`&emsp;list contents sorted by extension name
+>> 1. `ls -r`&emsp;list contents in reverse order
+>> 2. `ls -R`&emsp;list contents as recursive directory tree
+>> 3. `ls -s`&emsp;list contents with file size
+>> 4. `ls -S`&emsp;list contents sorted by file size
+>> 5. `ls -X`&emsp;list contents sorted by extension name
 
 ---
 
