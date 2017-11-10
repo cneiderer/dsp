@@ -2,37 +2,34 @@
 
 from datetime import datetime
 
-# Convert date string to datetime object
-def convert_str_to_obj(ex, date_str):
-    # Get format
-    if ex is 'a':
-        format_str = '%m-%d-%Y'
-    elif ex is 'b':
-        format_str = '%m%d%Y'
-    else:
-        format_str = '%d-%b-%Y'    
-    # Convert str to obj and return
-    return datetime.strptime(date_str, format_str)
+def main():
+    ####a) 
+    date_start = '01-02-2013'  
+    date_stop = '07-28-2015' 
+    format_str = '%m-%d-%Y'
+    print('ex-a): {} days'.format(calculate_delta(date_start, date_stop, format_str)))
 
-# Calculate number of days between dates
-def calculate_delta(ex, date_start, date_stop):    
-    delta = convert_str_to_obj(ex, date_stop) - convert_str_to_obj(ex, date_start)
-#    return delta.days
-    print("exercise-{ex}: {delta} days".format(ex=ex, delta=delta.days))
+    ####b)  
+    date_start = '12312013'  
+    date_stop = '05282015'  
+    format_str = '%m%d%Y'
+    print('ex-b): {} days'.format(calculate_delta(date_start, date_stop, format_str)))
 
-####a) 
-date_start = '01-02-2013'  
-date_stop = '07-28-2015' 
-calculate_delta('a', date_start, date_stop)
+    ####c)  
+    date_start = '15-Jan-1994'  
+    date_stop = '14-Jul-2015'
+    format_str = '%d-%b-%Y'
+    print('ex-c): {} days'.format(calculate_delta(date_start, date_stop, format_str)))
 
-####b)  
-date_start = '12312013'  
-date_stop = '05282015'  
-calculate_delta('b', date_start, date_stop)
 
-####c)  
-date_start = '15-Jan-1994'  
-date_stop = '14-Jul-2015'
-calculate_delta('c', date_start, date_stop)
+def calculate_delta(date_start, date_stop, format_str):    
+    '''Calculate number of days between dates'''
 
+    delta = datetime.strptime(date_stop, format_str) - datetime.strptime(date_start, format_str)
+    return delta.days
+#    print('exercise-{0}: {1} days'.format(ex, delta.days))
+
+
+if __name__ == "__main__":
+    main()
  
