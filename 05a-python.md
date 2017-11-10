@@ -82,7 +82,9 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> Comprehensions are a special notation for building up lists, dictionaries and sets from other lists, dictionaries and sets, modifying and filtering them in the process. They allow you to express complicated looping logic in a tiny amount of space.  
 >>
->> List comprehensions are the best known and most widely used.
+>> Comprehensions are very similar to the `map()` and `filter()` functions which apply a function to each element in a sequence to either modify or filter the elements of the sequence.
+>>
+>> List comprehensions are the best known and most widely used. A list comprehension provides a compact way of mapping a list into another list by applying a function to each of the elements of the list.
 >>
 >> List Comprehension vs. `map()` Function Example:  
 >> ```python
