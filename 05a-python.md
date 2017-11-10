@@ -57,6 +57,14 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >> [18, 14, 14, 14]
 >> ```
 >>
+>> Filtering Example:  
+>> The function `filter(func, seq)` offers an elegant way to filter out all the elements of a sequence `seq` for which the function `func` returns True.
+>> ```python
+>> fib = [0,1,1,2,3,5,8,13,21,34,55]
+>> filter(lambda x: x % 2 == 0, fib)
+>> [0, 2, 8, 34]
+>> ```
+>>
 >> Sorting Example:
 >> `sorted(seq, key=func)` returns a new list with the elements of the sequence `seq` sorted according to function `func`.  
 >> ```python
