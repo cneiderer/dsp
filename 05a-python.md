@@ -53,15 +53,15 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >> ```python
 >> a = [1, 2, 3, 4]
 >> b = [17, 12, 11 ,10]
->> map(lambda x, y: x+y, a,b)
+>> list(map(lambda x, y: x + y, a, b))
 >> [18, 14, 14, 14]
 >> ```
 >>
 >> Filtering Example:  
 >> The function `filter(func, seq)` offers an elegant way to filter out all the elements of a sequence `seq` for which the function `func` returns True.
 >> ```python
->> fib = [0,1,1,2,3,5,8,13,21,34,55]
->> filter(lambda x: x % 2 == 0, fib)
+>> fib = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+>> list(filter(lambda x: x % 2 == 0, fib))
 >> [0, 2, 8, 34]
 >> ```
 >>
@@ -80,7 +80,52 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Comprehensions are a special notation for building up lists, dictionaries and sets from other lists, dictionaries and sets, modifying and filtering them in the process. They allow you to express complicated looping logic in a tiny amount of space.  
+>>
+>> List comprehensions are the best known and most widely used.
+>>
+>> List Comprehension vs. `map()` Function Example:  
+>> ```python
+>> a = [1, 2, 3, 4]
+>> b = [17, 12, 11, 10]
+>> 
+>> # list comprehension
+>> [x + y for x, y in zip(a, b)]
+>> [18, 14, 14, 14]
+>>
+>> # map function
+>> list(map(lambda x, y: x + y, a, b))
+>> [18, 14, 14, 14]
+>>
+>> ```
+>>
+>> List Comprehension vs. `filter()` Function Example:
+>> ```python
+>> fib = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+>>
+>> # list comprehension
+>> [x for x in fib if x % 2 == 0]
+>> [0, 2, 8, 34]
+>>
+>> # filter function
+>> list(filter(lambda x: x % 2 == 0, fib))
+>> [0, 2, 8, 34]
+>> ```
+>> 
+>> Set Comprehension Example:  
+>> The syntax for set comprehensions is almost identical to that of list comprehensions, but it uses curly brackets instead of square brackets. The pattern takes the form `{expr for item in sequence}`, and the result the same as passing the output of the equivalent list comprehension to the set function.
+>> ```python
+>> {x ** 2 for x in [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]}
+>> {1, 4, 9, 16, 25}
+>> ```
+>>
+>> Dictionary Comprehension Example:  
+>> The syntax for a dictionary comprehension is similar to a list comprehension; however, it outputs a key in addition to the result of the expression. The pattern takes the form `{key: expr for item in seq}`.
+>> ```python
+>> n = range(1, 6)
+>> {x: x ** 2 for x in n}
+>> {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+>> ```
 
 ---
 
