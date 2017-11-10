@@ -19,17 +19,17 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > (1) `pwd`&emsp;show current working directory<br>
-(2) `mkdir`&emsp;create an empty directory<br>
-(3) `rm -r`&emsp;delete a directory and all of its children<br>
-(4) `touch`&emsp;create an empty file<br>
-(5) `rm`&emsp;delete a file<br>
-(6) `mv`&emsp;rename a file<br>
-(7) `ls -a`&emsp;clist all contents in directory, including hidden files<br>
-(8) `cp`&emsp;copie a file or directory from one directory to another<br>
-(9) `cd`&emsp;change directory<br>
-(10) `alias`&emsp;create a command shortcut<br>
-(11) `grep`&emsp;find all files that contain specified pattern or expression<br>
+>> (1) `pwd`&emsp;show current working directory
+>> (2) `mkdir`&emsp;create an empty directory
+>> (3) `rm -r`&emsp;delete a directory and all of its children
+>> (4) `touch`&emsp;create an empty file
+>> (5) `rm`&emsp;delete a file
+>> (6) `mv`&emsp;rename a file
+>> (7) `ls -a`&emsp;clist all contents in directory, including hidden files
+>> (8) `cp`&emsp;copie a file or directory from one directory to another
+>> (9) `cd`&emsp;change directory
+>> (10) `alias`&emsp;create a command shortcut
+>> (11) `grep`&emsp;find all files that contain specified pattern or expression
 
 ---
 
@@ -44,13 +44,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > `ls`&emsp;list all contents, not including hidden items <br>
-`ls -a`&emsp;list all contents, including hidden files and directories <br>
-`ls -l`&emsp;list all contents in a directory in long format <br>
-`ls -lh`&emsp;list all contents in directory in long format with readable file size <br>
-`ls -lah`&emsp;list all contents in directory, including hidden files and directories, in long format with readable file size <br>
-`ls -t`&emsp;order files and directories by the time they were last modified <br>
-`ls -Glp`&emsp;list all contents in directory in long format, excluding display group and directories with a slash <br>
+>> * `ls`&emsp;list all contents, not including hidden items
+>> * `ls -a`&emsp;list all contents, including hidden files and directories
+>> * `ls -l`&emsp;list all contents in a directory in long format
+>> * `ls -lh`&emsp;list all contents in directory in long format with readable file size
+>> * `ls -lah`&emsp;list all contents in directory, including hidden files and directories, in long format with readable file size
+>> * `ls -t`&emsp;order files and directories by the time they were last modified
+>> * `ls -Glp`&emsp;list all contents in directory in long format, excluding display group and directories with a slash
 
 ---
 
@@ -58,11 +58,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > (1) `ls -r`&emsp;list contents in reverse order<br>
-(2) `ls -R`&emsp;list contents as recursive directory tree<br>
-(3) `ls -s`&emsp;list contents with file size<br>
-(4) `ls -S`&emsp;list contents sorted by file size<br>
-(5) `ls -X`&emsp;list contents sorted by extension name<br>
+>> (1) `ls -r`&emsp;list contents in reverse order
+>> (2) `ls -R`&emsp;list contents as recursive directory tree
+>> (3) `ls -s`&emsp;list contents with file size
+>> (4) `ls -S`&emsp;list contents sorted by file size
+>> (5) `ls -X`&emsp;list contents sorted by extension name
 
 ---
 
@@ -70,6 +70,6 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > `xargs` reads data from standard input (stdin) and executes the command (supplied to it as an argument) one or times based on the input read.  Any blanks and spaces in input are treated as delimiters, while blank lines are ignored.
+>> `xargs` reads data from standard input (stdin) and executes the command (supplied to it as an argument) one or times based on the input read. Any blanks and spaces in input are treated as delimiters, while blank lines are ignored.
 
 
