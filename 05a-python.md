@@ -43,7 +43,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >> 
 >> Simple Example:
 >> ```python
->> f = lambda x, y: x+y
+>> f = lambda x, y: x + y
 >> f(1, 1)
 >> 2
 >> ```
