@@ -8,8 +8,6 @@ Write another function that simulates many games, stores the estimates of lam, t
 
 Is this way of making an estimate biased? Plot the sampling distribution of the estimates and the 90% confidence interval. What is the standard error? What happens to sampling error for increasing values of lam?
 
----
-
 >> Single Game Simulation
 >> 
 >> ```python
