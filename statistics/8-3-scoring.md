@@ -11,12 +11,30 @@ Is this way of making an estimate biased? Plot the sampling distribution of the 
 >> Single Game Simulation
 >> 
 >> ```python
->>
+>> def single_game_sim(lam, game_len=90):
+>>     '''Simulates a game by taking a goal-scoring rate and generating the time between goals 
+>>        until the total time exceeds one game, then returns the number of goals scored.'''
+>> 
+>>     # DO SOMETHING
+>> 
+>>     return goals_scored
 >> ```
 >>
->> Many game Simulation:
+>> Many Game Simulation:
 >>
 >> ```python
+>> def multi_game_sim(num_games, lam, game_len=90):
+>>     '''Simulates many games, stores the estimates of lam, then computes mean error and RMSE.'''
+>>
+>>     goals_per_game = []
+>>     for n in range(num_games):
+>>         # simulate single game
+>>         goals_per_game.append(single_game_sim(lam))
+>>
+>>    # compute mean error
+>>    mean_error = 
+>>    # compute RMSE
+>>    rmse =
 >>
 >> ```
 >>
