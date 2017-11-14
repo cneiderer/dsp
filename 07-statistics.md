@@ -95,7 +95,16 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> The essential difference between Bayesian and Frequentist statisticians is in how probability is used. For frequentists probabilities are fundamentally related to frequencies of events. For Bayesians, probabilities are fundamentally related to our own knowledge about an event. 
+>>
+>> Frequentists use probability only to model certain processes broadly described as "sampling." Bayesians use probability more widely to model both sampling and other kinds of uncertainty.
+>>
+>> Frequentist inference is a type of statistical inference that draws conclusions from sample data by emphasizing the frequency or proportion of the data.  The frequentist school of statistics holds that we should use the concepts of probability and randomness only to describe the mechanics of certain kinds of sampling from populations, and not to describe our certainty or degree of belief. Frequentists aim to use probability in an objective way.    
+>>
+>> Bayesian inference is a method of statistical inference in which Bayes' theorem is used to update the probability for a hypothesis as more evidence or information becomes available.  
+>> 
+>>
+>>
 
 ---
 
