@@ -61,13 +61,16 @@ Is this way of making an estimate biased? Plot the sampling distribution of the 
 >>
 >> The mean error is small and decreases with n; therefore, this estimator appears to be unbiased.
 >>
->> Plot Goals Distribution
+>> Plot distribution, calculate standard error, and 90% confidence interval
 >> ```python
 >> estimates, rmse, me = SimulateManyGames() 
+>> print('RMSE:', rmse)
+>> 
 >> pmf = thinkstats2.Pmf(estimates)
 >>
 >> ci = (pmf.Percentile(5), pmf.Percentile(95))
->>
+>> print('90% CI:', ci)
+>> 
 >> def VertLine(x, y):
 >>     thinkplot.Plot([x, x], [0, y], color='0.8', linewidth=3)
 >>
@@ -80,11 +83,8 @@ Is this way of making an estimate biased? Plot the sampling distribution of the 
 >>
 >> ![goals_dist.png](8-3-goals_dist.png)
 >>
->> Calculate Standard Error
->> ```python
->> print('RMSE:', rmse)
->> ```
 >> RMSE: 1.41337999137  
+>> 90% CI: (0, 5)
 >>
 >> What happens to sampling error for increasing values of lam?
 >> ```python
