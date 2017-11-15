@@ -99,4 +99,4 @@ Using data from the NSFG, make a scatter plot of birth weight versus mother’s 
 >> Pearson: 0.0688339703541  
 >> Spearman: 0.0946100410966
 >>
->> There is minimal correlation between mother's age and birth weight.
+>> There is minimal correlation between the mother's age and the baby's birth weight.
