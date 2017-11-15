@@ -44,19 +44,20 @@ Is this way of making an estimate biased? Plot the sampling distribution of the 
 >>     return (goals_est, RMSE(goals_est, lam), MeanError(goals_est, lam))
 >> ```
 >>
->> Is this estimator unbiased?
+>> Is this way of making an estimate biased?
 >> ```python
+>> lam = 2
 >> num_games = [10, 100, 1000, 10**4, 10**5, 10**6, 10**7]
 >> for n in num_games:
->>     print('n={}:'.format(n), SimulateManyGames(n=n)[1:])  
+>>     print('n={}:'.format(n), SimulateManyGames(lam=lam, n=n)[1:])  
 >> ```
->> n=10: (1.3038404810405297, 0.29999999999999999)  
->> n=100: (1.3638181696985856, -0.059999999999999998)  
->> n=1000: (1.451895313030523, -0.0060000000000000001)   
->> n=10000: (1.4193308282426618, 0.0011000000000000001)  
->> n=100000: (1.4136795959481059, 0.0020699999999999998)  
->> n=1000000: (1.4143383612134686, 0.00026699999999999998)  
->> n=10000000: (1.4138155466679521, -0.00056999999999999998)  
+>> n=10: (1.5811388300841898, -0.10000000000000001)  
+>> n=100: (1.3928388277184118, 0.080000000000000002)  
+>> n=1000: (1.451895313030523, -0.0060000000000000001)  
+>> n=10000: (1.4058093754133238, 0.0051000000000000004)  
+>> n=100000: (1.4160861555710513, 0.010019999999999999)  
+>> n=1000000: (1.4169957656958612, 0.0036389999999999999)  
+>> n=10000000: (1.4142708368625863, -0.00096060000000000004)  
 >>
 >> The mean error is small and decreases with n; therefore, this estimator appears to be unbiased.
 >>
@@ -68,12 +69,30 @@ Is this way of making an estimate biased? Plot the sampling distribution of the 
 >> thinkplot.Config(xlabel='Goals Scored', ylabel='PMF')
 >> ```
 >>
->> INSERT IMAGE HERE
+>> ![goals_dist.png](8-3-goals_dist.png)
 >>
 >> Calculate Standard Error
 >> ```python
->> print('RMSE:', RMSE(estimates, lam))
->> print('Mean Error:', MeanError(estimates, lam))
+>> print('RMSE:', rmse)
 >> ```
 >> RMSE: 1.41337999137  
->> Mean Error: 0.000381
+>>
+>> What happens to sampling error for increasing values of lam?
+>> ```python
+>> n = 10**6
+>> L = range(1, 11)
+>> for lam in L:
+>>     print('L={}:'.format(lam), SimulateManyGames(lam=lam, n=n)[1:])
+>> ```
+>> L=1: (0.99988649355814385, 0.00042499999999999998)  
+>> L=2: (1.4150183744390035, 0.0015410000000000001)  
+>> L=3: (1.7327795589745396, 0.003277)  
+>> L=4: (1.9975432410839071, 0.00026899999999999998)  
+>> L=5: (2.2365068745702525, -0.000919)  
+>> L=6: (2.4500599992653243, -0.0045659999999999997)  
+>> L=7: (2.6491287246942155, 0.0063870000000000003)  
+>> L=8: (2.8301969896104402, -0.0022950000000000002)  
+>> L=9: (2.9986300205260403, 0.0023340000000000001)  
+>> L=10: (3.1642141204412826, 0.002287)  
+>>
+>> As lambda increases, RMSE increases.
