@@ -21,6 +21,7 @@ What percentage of the U.S. male population is in this range? (Hint: use scipy.s
 >> ```python
 >> min_ht = (5 * 12 + 10) * 2.54 # 5'10"
 >> max_ht = (6 * 12 + 1) * 2.54 # 6'1"
+>> ```
 >> 
 >> Compute percentage of population between height limits
 >> ```python
