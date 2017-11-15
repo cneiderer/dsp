@@ -65,7 +65,16 @@ Is this way of making an estimate biased? Plot the sampling distribution of the 
 >> ```python
 >> estimates, rmse, me = SimulateManyGames() 
 >> pmf = thinkstats2.Pmf(estimates)
+>>
+>> ci = (pmf.Percentile(5), pmf.Percentile(95))
+>>
+>> def VertLine(x, y):
+>>     thinkplot.Plot([x, x], [0, y], color='0.8', linewidth=3)
+>>
 >> thinkplot.Hist(pmf)
+>> y = max([x[1] for x in pmf.Largest()])
+>> VertLine(ci[0], y)
+>> VertLine(ci[1], y)
 >> thinkplot.Config(xlabel='Goals Scored', ylabel='PMF')
 >> ```
 >>
