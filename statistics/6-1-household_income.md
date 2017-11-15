@@ -14,8 +14,32 @@ InterpolateSample generates a pseudo-sample; that is, a sample of household inco
 
 Compute the median, mean, skewness and Pearson’s skewness of the resulting sample. What fraction of households reports a taxable income below the mean? How do the results depend on the assumed upper bound?  
 
+>> Compute Sample Mean
+>> ```python
+>> print('Mean:', Mean(sample))
+>> ```
+>> Mean: 74278.7075312
 >>
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Compute Sample Median
+>> ```python
+>> print('Median:', Median(sample))
+>> ```
+>> Median: 51226.4544789
+>> 
+>> Sample Mean > Sample Median => Skewed Right
 >>
+>> Compute Skewness
+>> ```python
+>> print('Skewness:', Skewness(sample))
+>> ```
+>> Skewness: 4.94992024443  
+>> Skewness > 0 => Skewed Right
+>> 
+>> Compute Pearson Skewness
+>> ```python
+>> print('Pearson Skewness:', PearsonMedianSkewness(sample))
+>> ```
+>> Pearson Skewness: 0.736125801914  
+>> Pearson Skewness > 0 => Skewed Right
 >>
->>
+>> No matter where you set the upper bound, the data is always skewed to the right. Increasing the upper bound (for instance, from one million to 10 million) increases the skewness further to the right, and reducing the upper bound (for instance, from one million to 100 thousand) reduces the skewness to the right, but the data is still skewed to the right. 
