@@ -62,11 +62,12 @@ Using data from the NSFG, make a scatter plot of birth weight versus mother’s 
 >> ```python
 >> # Covariance
 >> def Cov(xs, ys, meanx=None, meany=None):
+>>     '''Calculates the covariance of x and y'''
 >>     xs = np.asarray(xs)
->>     ys = np.asarray(ys)
->> 
 >>     if meanx is None:
 >>         meanx = np.mean(xs)
+>>
+>>     ys = np.asarray(ys)
 >>     if meany is None:
 >>         meany = np.mean(ys)
 >>
@@ -75,10 +76,11 @@ Using data from the NSFG, make a scatter plot of birth weight versus mother’s 
 >> 
 >> # Pearson Correlation
 >> def Corr(xs, ys):
+>>     '''Calculates the Pearson correlation coefficient of x and y'''
 >>     xs = np.asarray(xs)
->>     ys = np.asarray(ys)
->> 
 >>     meanx, varx = thinkstats2.MeanVar(xs)
+>>
+>>     ys = np.asarray(ys)
 >>     meany, vary = thinkstats2.MeanVar(ys)
 >> 
 >>     corr = Cov(xs, ys, meanx, meany) / np.sqrt(varx * vary)
@@ -86,8 +88,10 @@ Using data from the NSFG, make a scatter plot of birth weight versus mother’s 
 >>
 >> # Spearman
 >> def SpearmanCorr(xs, ys):
+>>     '''Calculates the Spearman correlation coefficient of x and y'''
 >>     xranks = pd.Series(xs).rank()
 >>     yranks = pd.Series(ys).rank()
+>>
 >>     return Corr(xranks, yranks)
 >> ```
 >>
