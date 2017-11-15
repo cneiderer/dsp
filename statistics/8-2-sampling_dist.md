@@ -61,5 +61,5 @@ Repeat the experiment with a few different values of n and make a plot of standa
 >>                 ylabel='Standard Error')
 >> ```
 >>
->> ![sample_sz_vs_stderr.png](8-2-sample_sz_vs_stderr.png)
+>> ![size_vs_stderr.png](8-2-size_vs_stderr.png)
 >>
