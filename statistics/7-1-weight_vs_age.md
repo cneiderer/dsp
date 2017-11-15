@@ -32,8 +32,7 @@ Using data from the NSFG, make a scatter plot of birth weight versus mother’s 
 >>                  ylabel='Birth Weight (lbs)',
 >>                  legend=False)
 >> ```
->>
->> INSERT IMAGE HERE
+>> ![age_vs_weight.png](7-1-age_vs_weight.png)
 >>
 >> Plot Mother's Age vs. Birth Weight Quartiles
 >> ```python
@@ -57,8 +56,7 @@ Using data from the NSFG, make a scatter plot of birth weight versus mother’s 
 >>                  ylabel='Birth Weight (lbs)', 
 >>                  legend=True)
 >> ```
->>
->> INSERT IMAGE HERE
+>> ![age_vs_weight_quartiles.png](7-1-age_vs_weight_quartiles.png)
 >>
 >> Define Correlation Functions
 >> ```python
