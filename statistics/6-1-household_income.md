@@ -26,20 +26,20 @@ Compute the median, mean, skewness and Pearson’s skewness of the resulting sam
 >> ```
 >> Median: 51226.4544789
 >> 
->> Sample Mean > Sample Median => Skewed Right
+>> Sample Mean > Sample Median => data distribution is skewed right
 >>
 >> Compute Skewness
 >> ```python
 >> print('Skewness:', Skewness(sample))
 >> ```
 >> Skewness: 4.94992024443  
->> Skewness > 0 => Skewed Right
+>> Skewness > 0 => data distribution is skewed right
 >> 
 >> Compute Pearson Skewness
 >> ```python
 >> print('Pearson Skewness:', PearsonMedianSkewness(sample))
 >> ```
 >> Pearson Skewness: 0.736125801914  
->> Pearson Skewness > 0 => Skewed Right
+>> Pearson Skewness > 0 => data distribution is skewed right
 >>
 >> No matter where you set the upper bound, the data is always skewed to the right. Increasing the upper bound (for instance, from one million to 10 million) increases the skewness further to the right, and reducing the upper bound (for instance, from one million to 100 thousand) reduces the skewness to the right, but the data is still skewed to the right. 
