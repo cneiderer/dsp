@@ -51,3 +51,6 @@ Use this model to test the differences in pregnancy length and birth weight. How
 >> p-value = < 0.001  
 >> actual = 0.124761184535  
 >> ts max = 0.0925545575887  
+>>
+>> In this case, model selection between permutation and resampling minimally effects the results.
+>>
