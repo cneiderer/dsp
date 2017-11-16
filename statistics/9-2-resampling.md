@@ -7,7 +7,47 @@ Write a class named DiffMeansResample that inherits from DiffMeansPermute and ov
 
 Use this model to test the differences in pregnancy length and birth weight. How much does the model affect the results?
 
+>> Define DiffMeansResample Class
+>> ```python
+>> class DiffMeansResample(DiffMeansPermute):
 >>
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>>     def RunModel(self):
+>>         group1 = np.random.choice(self.pool, self.n, replace=True)
+>>         group2 = np.random.choice(self.pool, self.m, replace=True)
+>>        
+>>         return group1, group2
+>>```
 >>
+>> Test the differences in pregancy length between first-born and other babies.
+>> ```python
+>> data = firsts.prglngth.values, others.prglngth.values
+>> ht = DiffMeansResample(data)
+>> p_value = ht.PValue()
+>> print('DiffMeansResample Pregnancy Length:')
+>> if p_value == 0: 
+>>     p_value = '< 0.001'
+>> print('p-value =', p_value)
+>> print('actual =', ht.actual)
+>> print('ts max =', ht.MaxTestStat())
+>> ```
+>> DiffMeansResample Pregnancy Length:  
+>> p-value = 0.173  
+>> actual = 0.0780372667775  
+>> ts max = 0.206175715361  
 >>
+>> Test the differences in birth weight between first-born and other babies.
+>> ```python
+>> data = firsts.totalwgt_lb.dropna().values, others.totalwgt_lb.dropna().values
+>> ht = DiffMeansResample(data)
+>> p_value = ht.PValue()
+>> print('DiffMeansResample Birth Weight:')
+>> if p_value == 0: 
+>>     p_value = '< 0.001'
+>> print('p-value =', p_value)
+>> print('actual =', ht.actual)
+>> print('ts max =', ht.MaxTestStat())
+>> ```
+>> DiffMeansResample Birth Weight:  
+>> p-value = < 0.001  
+>> actual = 0.124761184535  
+>> ts max = 0.0925545575887  
