@@ -2,33 +2,33 @@
 # Licensed under the Apache License, Version 2.0
 
 def main():
-    print("\nTesting donuts():")
-    print("=================")
-    test_donuts()
+#    print("\nTesting donuts():")
+#    print("=================")
+#    test_donuts()
 
-    print("\nTesting both_ends():")
-    print("====================")
-    test_both_ends()
+#    print("\nTesting both_ends():")
+#    print("====================")
+#    test_both_ends()
 
-    print("\nTesting fix_start():")
-    print("====================")
-    test_fix_start()
+#    print("\nTesting fix_start():")
+#    print("====================")
+#    test_fix_start()
 
-    print("\nTesting mix_up():")
-    print("===================")
-    test_mix_up()
+#    print("\nTesting mix_up():")
+#    print("===================")
+#    test_mix_up()
 
-    print("\nTesting verbing():")
-    print("==================")
-    test_verbing()
+#    print("\nTesting verbing():")
+#    print("==================")
+#    test_verbing()
 
     print("\nTesting not_bad:")
     print("================")
     test_not_bad()
 
-    print("\nTesting front_back():")
-    print("=====================")
-    test_front_back()
+#    print("\nTesting front_back():")
+#    print("=====================")
+#    test_front_back()
 
 def donuts(count):
     """
@@ -198,31 +198,21 @@ def not_bad(s):
     "It's bad yet not"
     """
 
-    import string
+    not_idx = s.find('not')
+    bad_idx = s.find('bad')
 
-    end_char = ''
-    if s[-1] in string.punctuation:
-        end_char = s[-1]
-        s = s[:-1]
-    words = s.split()
-
-    try:
-        not_idx = words.index('not')
-        bad_idx = words.index('bad')
-    except:
-        return s
-
-    if not_idx < bad_idx:
-        return " ".join(words[:not_idx] + ['good'] + words[bad_idx+1:]) + end_char
-    else:
-        return s
+    if (not_idx != -1) and (bad_idx != -1) and (bad_idx > not_idx):
+        s = s[:not_idx] + 'good' + s[bad_idx+3:]
+    
+    return s
 
 
 def test_not_bad():
     strings = ['This movie is not so bad', 
                'This dinner is not that bad!', 
-               'This tea is not hot', 
-               "It's bad yet not"]
+               'This tea is not hot!', 
+               "It's bad yet not",
+               "It's bad, yet not that bad"]
     for s in strings:
         print("not_bad({0}) => {1}".format(s, not_bad(s)))
 
