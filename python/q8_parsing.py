@@ -1,4 +1,4 @@
-# The football.csv file contains the results from the English Premier League. 
+#i The football.csv file contains the results from the English Premier League. 
 # The columns labeled ‘Goals’ and ‘Goals Allowed’ contain the total number of 
 # goals scored for and against each team in that season (so Arsenal scored 79 goals 
 # against opponents, and had 36 goals scored against them). Write a program to read the file, 
@@ -8,23 +8,19 @@ import csv
 from operator import itemgetter
 
 def main():
-#    print("\nTesting version 1 (i.e., the easy way with pandas):")
-#    smallest_goal_difference_v1()
+    print("\nTesting version 1 (i.e., the easy way with pandas):")
+    smallest_goal_difference_v1()
 
-#    print("\nTesting version 2 (i.e., the harder way with pure python):")
-#    smallest_goal_difference_v2()
+    print("\nTesting version 2 (i.e., the harder way with pure python):")
+    smallest_goal_difference_v2()
 
-    print("\nTesting read_data(filename)")
+    print("\nTesting multi-function approach required by HackerRank")
     filename = 'football.csv'
     data = read_data(filename)
-    for row in data:
-        print(row)
-
     ridx = get_index_with_min_abs_score_difference(data)
-    print(ridx)
-
     team = get_team(ridx, data)
     print(team)
+
 
 def read_data(filename):
     """Returns a list of lists representing the rows of the csv file data.
@@ -41,6 +37,7 @@ def read_data(filename):
     
     return data
 
+
 def get_index_with_min_abs_score_difference(data):
     """Returns the index of the team with the smallest difference
     between 'for' and 'against' goals, in terms of absolute value.
@@ -55,10 +52,11 @@ def get_index_with_min_abs_score_difference(data):
 
     gd = []
     for idx, team_data in enumerate(data[1:]):
-        gd.append((idx, int(team_data[gf_idx]) - int(team_data[ga_idx])))
+        gd.append((idx, abs(int(team_data[gf_idx]) - int(team_data[ga_idx]))))
     
     return min(gd, key=itemgetter(1))[0]
-    
+
+
 def get_team(ridx, data):
     """Returns the team name at a given index.
     
@@ -72,6 +70,7 @@ def get_team(ridx, data):
 
     return data[1:][ridx][team_idx]
 
+
 def smallest_goal_difference_v1():
 
     import pandas as pd
@@ -79,7 +78,7 @@ def smallest_goal_difference_v1():
 #    csv_file = '/home/cneiderer/ds/metis/metisgh/prework/dsp/python/football.csv'
     csv_file = 'football.csv'
     df = pd.read_csv(csv_file)
-    print(df['Team'][(df['Goals']-df['Goals Allowed']).idxmin()])
+    print(df['Team'][(df['Goals']-df['Goals Allowed']).abs().idxmin()])
 
 
 def smallest_goal_difference_v2():
@@ -104,7 +103,7 @@ def smallest_goal_difference_v2():
 
     gd = []
     for idx, team_data in enumerate(data):
-        gd.append((idx, int(team_data[gf_idx]) - int(team_data[ga_idx])))
+        gd.append((idx, abs(int(team_data[gf_idx]) - int(team_data[ga_idx]))))
 
     print(data[min(gd, key=itemgetter(1))[0]][team_idx])
 
